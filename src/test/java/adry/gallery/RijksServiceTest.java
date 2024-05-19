@@ -5,13 +5,13 @@ import com.andrewoid.ApiKey;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class RijksServiceTest {
-    public void Page() {
+    public void page() {
         // given
         RijksService service = new RijksServiceFactory().getService();
         ApiKey apiKey = new ApiKey();
 
         // when
-        ArtObjects gallery = service.Page(
+        ArtObjects gallery = service.page(
                 apiKey.get(), 4
         ).blockingGet();
 
@@ -23,13 +23,14 @@ class RijksServiceTest {
         assertNotNull(artObject.webImage.url);
         assertNotNull(artObject.principalOrFirstMaker);
     }
-     public void Query() {
+
+     public void query() {
          // given
          RijksService service = new RijksServiceFactory().getService();
          ApiKey apiKey = new ApiKey();
 
          // when
-         ArtObjects gallery = service.Query(
+         ArtObjects gallery = service.query(
                  apiKey.get(), 4, "Eenden"
          ).blockingGet();
 
@@ -41,13 +42,14 @@ class RijksServiceTest {
          assertNotNull(artObject.webImage.url);
          assertNotNull(artObject.principalOrFirstMaker);
     }
-     public void Artist() {
+
+     public void artist() {
          // given
          RijksService service = new RijksServiceFactory().getService();
          ApiKey apiKey = new ApiKey();
 
          // when
-         ArtObjects gallery = service.Artist(
+         ArtObjects gallery = service.artist(
                  apiKey.get(), 1, "Willem Maris"
          ).blockingGet();
 
