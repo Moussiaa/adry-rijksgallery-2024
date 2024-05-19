@@ -12,6 +12,7 @@ public interface RijksService {
     @GET("/api/en/collection")
 
     Single<ArtObjects> page(
+
             // pass parameters given on CollectionAPI (app id mandatory) to validate the call
             @Query("key") String key,
             @Query("p") int pageNum
@@ -20,6 +21,7 @@ public interface RijksService {
     @GET("/api/en/collection")
 
     Single<ArtObjects> query(
+
             @Query("key") String key,
             @Query("p") int pageNum,
             @Query("q")String query
@@ -28,6 +30,7 @@ public interface RijksService {
     @GET("/api/en/collection")
 
     Single<ArtObjects> artist(
+
             @Query("key") String key,
             @Query("p") int pageNum,
             @Query("involvedMaker")String artist
