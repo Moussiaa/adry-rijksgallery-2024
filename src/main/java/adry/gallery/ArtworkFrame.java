@@ -6,14 +6,15 @@ import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 
-public class ImageFrame extends JFrame {
+public class ArtworkFrame extends JFrame {
 
-    // use fields from art object
-    public ImageFrame(ArtObject artObject) throws IOException {
+    public ArtworkFrame(ArtObject artObject) throws IOException {
 
         setTitle(artObject.principalOrFirstMaker + ", " + artObject.title);
         setSize(800, 750);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        setLayout(new BorderLayout());
 
         URL url = new URL(artObject.webImage.url);
         Image image = ImageIO.read(url);
