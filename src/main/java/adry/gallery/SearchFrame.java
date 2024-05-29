@@ -36,8 +36,7 @@ public class SearchFrame extends JFrame {
         setContentPane(main);
 
         // header panel: prev and next page buttons, search bar
-        JPanel topBar = new JPanel(new FlowLayout());
-        searchBar = new JTextField(30);
+        searchBar = new JTextField(50);
         JButton prevButton = new JButton("<< Previous Page");
         JButton nextButton = new JButton("Next Page >>");
 
@@ -70,6 +69,7 @@ public class SearchFrame extends JFrame {
         });
 
         // add to main panel
+        JPanel topBar = new JPanel(new FlowLayout());
         topBar.add(prevButton);
         topBar.add(searchBar);
         topBar.add(nextButton);
